@@ -1,4 +1,5 @@
 import 'package:emi_app/components/details.dart';
+import 'package:emi_app/pages/EditProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -42,8 +43,8 @@ class _ProfileState extends State<Profile> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
-                              children: const [
-                                Text(
+                              children: [
+                                const Text(
                                   "Rishu Singh",
                                   style: TextStyle(
                                     fontSize: 20,
@@ -51,24 +52,35 @@ class _ProfileState extends State<Profile> {
                                     color: Color(0xFF565656),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text("User Email",
+                                const Text("exaple@gmail.com",
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF565656),
                                     )),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text("+91 1234567890",
+                                const Text("+91 1234567890",
                                     style: TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF565656),
                                     )),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const EditProfile()));
+                                  },
+                                  child: const Text("Edit",
+                                      style: TextStyle(color: Colors.red)),
                                 ),
                               ],
                             ),
