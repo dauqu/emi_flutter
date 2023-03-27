@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-String api = "http://localhost:4000/api";
-// String api = "https://emi-backend-tnqe7m.dauqu.host/api";
+// String api = "http://localhost:4000/api";
+String api = "https://emi-backend-tnqe7m.dauqu.host/api";
 
 // prinary color
 Color primaryColor = const Color(0xFF448AFF);
