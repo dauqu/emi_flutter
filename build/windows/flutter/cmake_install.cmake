@@ -1,4 +1,4 @@
-# Install script for directory: D:/Flutter/emi_futter/windows/flutter
+# Install script for directory: D:/Flutter/EMIWale/emi_futter/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

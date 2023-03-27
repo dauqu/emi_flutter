@@ -1,5 +1,7 @@
 import 'package:emi_app/components/botton-navigation.dart';
+import 'package:emi_app/pages/Login.dart';
 import 'package:flutter/material.dart';
+import 'package:emi_app/pages/scanner.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/home': (context) => const MyHomePage(),
+        '/scanner': (context) => const Scanner(),
+      },
     );
   }
 }

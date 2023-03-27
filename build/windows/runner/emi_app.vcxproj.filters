@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\runner\flutter_window.cpp">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\runner\flutter_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\runner\main.cpp">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\runner\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\runner\utils.cpp">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\runner\utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\runner\win32_window.cpp">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\runner\win32_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\flutter\generated_plugin_registrant.cc">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\generated_plugin_registrant.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Flutter\emi_futter\windows\runner\CMakeLists.txt" />
+    <CustomBuild Include="D:\Flutter\EMIWale\emi_futter\windows\runner\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="D:\Flutter\emi_futter\windows\runner\Runner.rc">
+    <ResourceCompile Include="D:\Flutter\EMIWale\emi_futter\windows\runner\Runner.rc">
       <Filter>Source Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DEF681EC-A3A6-37BF-B17C-72D2287F200E}</UniqueIdentifier>
+      <UniqueIdentifier>{C6D48FAF-675E-3892-BADB-66624AD693F1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

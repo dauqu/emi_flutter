@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
+    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Flutter\emi_futter\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{1DDBAD19-C853-30DC-BE65-79B05A94F4A8}</UniqueIdentifier>
+      <UniqueIdentifier>{46CF90BA-A7E0-3092-AA47-41ABE7332660}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{DEF681EC-A3A6-37BF-B17C-72D2287F200E}</UniqueIdentifier>
+      <UniqueIdentifier>{C6D48FAF-675E-3892-BADB-66624AD693F1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

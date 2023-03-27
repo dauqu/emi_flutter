@@ -1,6 +1,6 @@
-^D:\FLUTTER\EMI_FUTTER\BUILD\WINDOWS\CMAKEFILES\DD2CB6BB474ADC16C25682CF566A7CD8\FLUTTER_WINDOWS.DLL.RULE
+^D:\FLUTTER\EMIWALE\EMI_FUTTER\BUILD\WINDOWS\CMAKEFILES\36EEE845AAFA76EAF1910565B7C26B2E\FLUTTER_WINDOWS.DLL.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=D:\Flutter\emi_futter FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=D:\Flutter\emi_futter\windows\flutter\ephemeral PROJECT_DIR=D:\Flutter\emi_futter FLUTTER_TARGET=D:\Flutter\emi_futter\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\Flutter\emi_futter\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=D:\Flutter\EMIWale\emi_futter FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral PROJECT_DIR=D:\Flutter\EMIWale\emi_futter FLUTTER_TARGET=D:\Flutter\EMIWale\emi_futter\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=D:\Flutter\EMIWale\emi_futter\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -8,7 +8,7 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\FLUTTER\EMI_FUTTER\BUILD\WINDOWS\CMAKEFILES\C46291E544E71223061B282B05B3959F\FLUTTER_ASSEMBLE.RULE
+^D:\FLUTTER\EMIWALE\EMI_FUTTER\BUILD\WINDOWS\CMAKEFILES\9CC583F6FF431CBAAC5FDDF13AB28F32\FLUTTER_ASSEMBLE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -16,9 +16,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^D:\FLUTTER\EMI_FUTTER\WINDOWS\FLUTTER\CMAKELISTS.TXT
+^D:\FLUTTER\EMIWALE\EMI_FUTTER\WINDOWS\FLUTTER\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/emi_futter/windows -BD:/Flutter/emi_futter/build/windows --check-stamp-file D:/Flutter/emi_futter/build/windows/flutter/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-file D:/Flutter/EMIWale/emi_futter/build/windows/flutter/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
