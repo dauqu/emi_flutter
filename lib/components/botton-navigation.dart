@@ -3,6 +3,7 @@ import 'package:emi_app/pages/home.dart';
 import 'package:emi_app/pages/notifications.dart';
 import 'package:emi_app/pages/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -13,6 +14,9 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
+
+  late SharedPreferences prefs;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[Home(), Emi(), Profile()];
@@ -48,6 +52,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   builder: (context) => const Notifications(),
                 ),
               );
+            },
+          ),
+          IconButton(
+            splashRadius: 20,
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              prefs = await SharedPreferences.getInstance();
+              prefs.remove('token');
+              prefs.remove('user');
+              Navigator.pushReplacementNamed(context, '/');
             },
           ),
         ],
