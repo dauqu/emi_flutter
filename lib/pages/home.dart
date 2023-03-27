@@ -170,13 +170,20 @@ class _HomeState extends State<Home> {
                                       Text(
                                         //
                                         // +
+
                                         emi["remaining_amount"]
                                                     .toString()
-                                                    .split(".")[1]
+                                                    .split(".")
                                                     .length <=
-                                                2
-                                            ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1]}"
-                                            : "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1].substring(0, 2)}",
+                                                1
+                                            ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.00"
+                                            : emi["remaining_amount"]
+                                                        .toString()
+                                                        .split(".")[1]
+                                                        .length <=
+                                                    2
+                                                ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1]}"
+                                                : "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1].substring(0, 2)}",
                                         style: const TextStyle(
                                           fontSize: 15,
                                         ),
