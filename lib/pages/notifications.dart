@@ -35,6 +35,13 @@ class _NotificationsState extends State<Notifications> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading:  IconButton(
+          splashRadius: 20,
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         elevation: 0,
         centerTitle: false,
         title: const Text('Notifications'),

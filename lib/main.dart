@@ -1,5 +1,5 @@
 import 'package:emi_app/components/botton-navigation.dart';
-import 'package:emi_app/pages/Login.dart';
+import 'package:emi_app/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:emi_app/pages/scanner.dart';
 

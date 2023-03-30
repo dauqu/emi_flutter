@@ -188,10 +188,22 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "pretty_qr_code",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/pretty_qr_code-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
       "name": "process",
       "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/process-4.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "qr",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/qr-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "shared_preferences",
@@ -308,7 +320,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-03-29T14:03:05.120099Z",
+  "generated": "2023-03-30T10:44:04.434318Z",
   "generator": "pub",
   "generatorVersion": "2.19.5"
 }

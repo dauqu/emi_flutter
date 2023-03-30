@@ -2,6 +2,7 @@ import 'package:emi_app/pages/emi.dart';
 import 'package:emi_app/pages/home.dart';
 import 'package:emi_app/pages/notifications.dart';
 import 'package:emi_app/pages/profile.dart';
+import 'package:emi_app/pages/qr_code.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,17 +32,24 @@ class _BottomNavigationState extends State<BottomNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          splashRadius: 20,
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            //Goto Menu
-          },
-        ),
+        leading: const Text(""), // This removes the back button
+        leadingWidth: 0,
         elevation: 0,
         centerTitle: false,
         title: const Text('Dashboard'),
         actions: [
+          IconButton(
+            splashRadius: 20,
+            icon: const Icon(Icons.qr_code_scanner),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const QrCode(),
+                ),
+              );
+            },
+          ),
           IconButton(
             splashRadius: 20,
             icon: const Icon(Icons.notifications),
@@ -52,16 +60,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   builder: (context) => const Notifications(),
                 ),
               );
-            },
-          ),
-          IconButton(
-            splashRadius: 20,
-            icon: const Icon(Icons.logout),
-            onPressed: () async {
-              prefs = await SharedPreferences.getInstance();
-              prefs.remove('token');
-              prefs.remove('user');
-              Navigator.pushReplacementNamed(context, '/');
             },
           ),
         ],

@@ -1,8 +1,13 @@
+import 'dart:convert';
+
 import 'package:emi_app/components/details.dart';
 import 'package:emi_app/pages/EditProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+import '../components/constant.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -12,6 +17,40 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  late SharedPreferences prefs;
+  Map user = {};
+  Map emi = {};
+  bool haveEmi = false;
+
+  Future getProfile() async {
+    try {
+      prefs = await SharedPreferences.getInstance();
+      String token = prefs.getString('token').toString();
+      final Uri url = Uri.parse("$api/profile");
+      final http.Response reponse =
+          await http.get(url, headers: {"token": token});
+
+      var data = jsonDecode(reponse.body);
+      print(data);
+      if (reponse.statusCode == 200) {
+        prefs.setString('user', jsonEncode(data));
+        setState(() {
+          user = data;
+          if (data["active_emi"] != null) haveEmi = true;
+        });
+      }
+    } catch (e) {
+      mySnackBar(context, e.toString(), type: "error");
+    }
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getProfile();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,9 +83,9 @@ class _ProfileState extends State<Profile> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                const Text(
-                                  "Rishu Singh",
-                                  style: TextStyle(
+                                 Text(
+                                  user["name"] ?? "Name",
+                                  style: const TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w800,
                                     color: Color(0xFF565656),
@@ -55,16 +94,16 @@ class _ProfileState extends State<Profile> {
                                 const SizedBox(
                                   height: 5,
                                 ),
-                                const Text("exaple@gmail.com",
-                                    style: TextStyle(
+                                 Text(user["email"] ?? "Email",
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF565656),
                                     )),
                                 const SizedBox(
                                   height: 5,
                                 ),
-                                const Text("+91 1234567890",
-                                    style: TextStyle(
+                                 Text(user["phone"] ?? "Phone",
+                                    style: const TextStyle(
                                       fontSize: 15,
                                       color: Color(0xFF565656),
                                     )),
