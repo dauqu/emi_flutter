@@ -2,19 +2,19 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Flutter\EMIWale\emi_futter\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Flutter\EMIWale\emi_futter\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+      <FullPath>C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Flutter\EMIWale\emi_futter\build\windows\runner\Debug\emi_app.exe</FullPath>
+      <FullPath>C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\runner\Debug\emi_flutter.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Flutter\EMIWale\emi_futter\build\windows\x64\Debug\ALL_BUILD</FullPath>
+      <FullPath>C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\x64\Debug\ALL_BUILD</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>D:\Flutter\EMIWale\emi_futter\build\windows\x64\Debug\INSTALL</FullPath>
+      <FullPath>C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\x64\Debug\INSTALL</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

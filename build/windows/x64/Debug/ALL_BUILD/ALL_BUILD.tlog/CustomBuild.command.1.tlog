@@ -1,6 +1,6 @@
-^D:\FLUTTER\EMIWALE\EMI_FUTTER\WINDOWS\CMAKELISTS.TXT
+^C:\USERS\HARSH SINGH\DOCUMENTS\FLUTTER\EMI_FLUTTER\WINDOWS\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-file D:/Flutter/EMIWale/emi_futter/build/windows/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Harsh singh/Documents/flutter/emi_flutter/windows" "-BC:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows" --check-stamp-file "C:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

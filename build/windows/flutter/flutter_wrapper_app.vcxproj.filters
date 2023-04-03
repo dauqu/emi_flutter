@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+    <ClCompile Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+    <ClCompile Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
+    <ClCompile Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
+    <ClCompile Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Flutter\EMIWale\emi_futter\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{46CF90BA-A7E0-3092-AA47-41ABE7332660}</UniqueIdentifier>
+      <UniqueIdentifier>{C28AEB35-D33F-3FE4-93D8-40CC67D824AA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{C6D48FAF-675E-3892-BADB-66624AD693F1}</UniqueIdentifier>
+      <UniqueIdentifier>{5C4A67A2-E65E-379B-8B03-E9C32490E9DA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

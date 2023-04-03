@@ -1,8 +1,8 @@
-# Install script for directory: D:/Flutter/EMIWale/emi_futter/windows/runner
+# Install script for directory: C:/Users/Harsh singh/Documents/flutter/emi_flutter/windows/runner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "$<TARGET_FILE_DIR:emi_app>")
+  set(CMAKE_INSTALL_PREFIX "$<TARGET_FILE_DIR:emi_flutter>")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

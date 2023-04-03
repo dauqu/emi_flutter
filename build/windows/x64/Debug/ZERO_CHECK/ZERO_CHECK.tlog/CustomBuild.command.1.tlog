@@ -1,6 +1,6 @@
-^D:\FLUTTER\EMIWALE\EMI_FUTTER\BUILD\WINDOWS\CMAKEFILES\42378AC32B2DB23C2AB1114D2894AF9A\GENERATE.STAMP.RULE
+^C:\USERS\HARSH SINGH\DOCUMENTS\FLUTTER\EMI_FLUTTER\BUILD\WINDOWS\CMAKEFILES\C985C5F7AC667494F848FB74EF62F5FD\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Flutter/EMIWale/emi_futter/build/windows/emi_app.sln
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Harsh singh/Documents/flutter/emi_flutter/windows" "-BC:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows/emi_flutter.sln"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

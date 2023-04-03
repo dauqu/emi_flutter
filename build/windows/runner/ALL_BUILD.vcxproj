@@ -21,7 +21,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2D912BEC-036E-3365-8019-547AADC905AC}</ProjectGuid>
+    <ProjectGuid>{5D460CC9-E6E2-3C73-AD73-09472054F086}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -88,11 +88,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Flutter\EMIWale\emi_futter\windows\runner\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\windows\runner\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Flutter/EMIWale/emi_futter/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Harsh singh/Documents/flutter/emi_flutter/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-file D:/Flutter/EMIWale/emi_futter/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Harsh singh/Documents/flutter/emi_flutter/windows" "-BC:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows" --check-stamp-file "C:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows/runner/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -101,11 +101,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Flutter\EMIWale\emi_futter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule D:/Flutter/EMIWale/emi_futter/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/Harsh singh/Documents/flutter/emi_flutter/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-file D:/Flutter/EMIWale/emi_futter/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Harsh singh/Documents/flutter/emi_flutter/windows" "-BC:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows" --check-stamp-file "C:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows/runner/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -114,11 +114,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">D:\Flutter\EMIWale\emi_futter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Flutter/EMIWale/emi_futter/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Harsh singh/Documents/flutter/emi_flutter/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/Flutter/EMIWale/emi_futter/windows -BD:/Flutter/EMIWale/emi_futter/build/windows --check-stamp-file D:/Flutter/EMIWale/emi_futter/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/Harsh singh/Documents/flutter/emi_flutter/windows" "-BC:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows" --check-stamp-file "C:/Users/Harsh singh/Documents/flutter/emi_flutter/build/windows/runner/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -127,22 +127,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Flutter\EMIWale\emi_futter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Flutter\EMIWale\emi_futter\build\windows\ZERO_CHECK.vcxproj">
-      <Project>{A9929F8F-7C1B-3D15-8386-CA16BBCE965F}</Project>
+    <ProjectReference Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{6C77B066-0AB0-3010-8FDB-70059F0CBBBC}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Flutter\EMIWale\emi_futter\build\windows\runner\emi_app.vcxproj">
-      <Project>{150531E9-E115-3150-A969-36631C04DAA6}</Project>
-      <Name>emi_app</Name>
+    <ProjectReference Include="C:\Users\Harsh singh\Documents\flutter\emi_flutter\build\windows\runner\emi_flutter.vcxproj">
+      <Project>{D8B41793-0C88-3985-BC50-24230A0C703E}</Project>
+      <Name>emi_flutter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
