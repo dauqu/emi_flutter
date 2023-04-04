@@ -22,8 +22,6 @@ class _HomeState extends State<Home> {
   DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
 
   var model = "";
-  var serial_number = "";
-  var platformVersion = "";
   var imeiNo = "";
 
 // Profile
@@ -68,7 +66,6 @@ class _HomeState extends State<Home> {
           await http.get(url, headers: {"token": token});
 
       var data = jsonDecode(reponse.body);
-      // print(data);
 
       if (reponse.statusCode == 200) {
         if (!data["have_emis"]) {
@@ -100,7 +97,7 @@ class _HomeState extends State<Home> {
   Future<void> initPlatformState() async {
     setState(() async {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-      qrData = androidInfo.fingerprint;
+      qrData = androidInfo.id;
     });
   }
 
@@ -146,14 +143,18 @@ class _HomeState extends State<Home> {
                           ),
                           textAlign: TextAlign.left,
                         ),
-                        PrettyQr(
-                          data: qrData,
-                          size: 100,
-                          typeNumber: 5,
-                          roundEdges: true,
-                          errorCorrectLevel: QrErrorCorrectLevel.M,
-                          image: const NetworkImage(
-                              "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/fa8nmvofinznny6rkwvf"),
+                        SizedBox(
+                          height: 100,
+                          width: 100,
+                          child: PrettyQr(
+                            data: qrData,
+                            size: 80,
+                            typeNumber: 5,
+                            roundEdges: true,
+                            errorCorrectLevel: QrErrorCorrectLevel.M,
+                            image: const NetworkImage(
+                                "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/fa8nmvofinznny6rkwvf"),
+                          ),
                         ),
                         const SizedBox(
                           height: 50,

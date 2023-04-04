@@ -28,7 +28,7 @@ class _QrCodeState extends State<QrCode> {
   void initPlatformState() async {
     setState(() async {
       AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-      qrData = androidInfo.fingerprint;
+      qrData = androidInfo.id;
     });
 
     // IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
