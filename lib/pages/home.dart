@@ -2,8 +2,13 @@ import 'dart:convert';
 
 import 'package:emi_app/components/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:device_info_plus/device_info_plus.dart';
+import 'package:device_information/device_information.dart';
+import 'package:platform_device_id/platform_device_id.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,6 +18,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // Device Info
+  DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
+
+  var model = "";
+  var serial_number = "";
+  var platformVersion = "";
+  var imeiNo = "";
+
+// Profile
   late SharedPreferences prefs;
   Map user = {};
   Map emi = {};
@@ -27,7 +41,6 @@ class _HomeState extends State<Home> {
           await http.get(url, headers: {"token": token});
 
       var data = jsonDecode(reponse.body);
-      print(data);
       if (reponse.statusCode == 200) {
         prefs.setString('user', jsonEncode(data));
         setState(() {
@@ -80,6 +93,17 @@ class _HomeState extends State<Home> {
     }
   }
 
+  //=======================================
+  var _deviceId = "";
+  var qrData = "";
+
+  Future<void> initPlatformState() async {
+    setState(() async {
+      AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+      qrData = androidInfo.fingerprint;
+    });
+  }
+
   @override
   void initState() {
     getProfile().then((data) {
@@ -92,6 +116,7 @@ class _HomeState extends State<Home> {
         });
       }
     });
+    initPlatformState();
     super.initState();
   }
 
@@ -121,10 +146,18 @@ class _HomeState extends State<Home> {
                           ),
                           textAlign: TextAlign.left,
                         ),
-                        Image.network(
-                            "https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png",
-                            width: 100,
-                            height: 100),
+                        PrettyQr(
+                          data: qrData,
+                          size: 100,
+                          typeNumber: 5,
+                          roundEdges: true,
+                          errorCorrectLevel: QrErrorCorrectLevel.M,
+                          image: const NetworkImage(
+                              "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/fa8nmvofinznny6rkwvf"),
+                        ),
+                        const SizedBox(
+                          height: 50,
+                        ),
                       ],
                     ),
                   ],
@@ -161,22 +194,7 @@ class _HomeState extends State<Home> {
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          //
-                          // +
-
-                          emi["remaining_amount"]
-                                      .toString()
-                                      .split(".")
-                                      .length <=
-                                  1
-                              ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.00"
-                              : emi["remaining_amount"]
-                                          .toString()
-                                          .split(".")[1]
-                                          .length <=
-                                      2
-                                  ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1]}"
-                                  : "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1].substring(0, 2)}",
+                          "13,000 INR",
                           style: const TextStyle(
                             fontSize: 15,
                           ),
@@ -189,18 +207,18 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
                         Text(
-                          '₹ ${emi['total_amount']}',
-                          style: const TextStyle(
+                          "25,000 INR",
+                          style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          '₹ ${emi['total_paid']}',
-                          style: const TextStyle(
+                          "14,000 INR",
+                          style: TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: Colors.green,
@@ -332,18 +350,19 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
-                          'IMEI',
+                      children: [
+                        const Text(
+                          'Serial Number',
                           style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          '123456789',
-                          style: TextStyle(
+                          imeiNo,
+                          style: const TextStyle(
                             fontSize: 15,
+                            //Upper case
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -354,17 +373,17 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
-                          'MAC Address',
+                      children: [
+                        const Text(
+                          'Model',
                           style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          '123456789',
-                          style: TextStyle(
+                          model,
+                          style: const TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
@@ -508,12 +527,12 @@ class _HomeState extends State<Home> {
               leading: const Icon(Icons.logout),
               title: const Text('Logout'),
               onTap: () async {
-              prefs = await SharedPreferences.getInstance();
-              prefs.remove('token');
-              prefs.remove('user');
-              // ignore: use_build_context_synchronously
-              Navigator.pushReplacementNamed(context, '/');
-            },
+                prefs = await SharedPreferences.getInstance();
+                prefs.remove('token');
+                prefs.remove('user');
+                // ignore: use_build_context_synchronously
+                Navigator.pushReplacementNamed(context, '/');
+              },
             ),
           ],
         ),

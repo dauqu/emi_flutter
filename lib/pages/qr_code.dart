@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
-import 'package:imei_plugin/imei_plugin.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 
 class QrCode extends StatefulWidget {
   const QrCode({Key? key}) : super(key: key);
@@ -11,8 +11,9 @@ class QrCode extends StatefulWidget {
 }
 
 class _QrCodeState extends State<QrCode> {
-  final String qrData = "https://harshaweb.com";
+  DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
 
+  var qrData = "";
   var platformVersion = "";
   var imeiNo = "";
   var modelName = "";
@@ -25,12 +26,13 @@ class _QrCodeState extends State<QrCode> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   void initPlatformState() async {
-    String imei = await ImeiPlugin.getImei();
-    List<String> multiImei =
-        await ImeiPlugin.getImeiMulti(); //for double-triple SIM phones
-    String uuid = await ImeiPlugin.getId();
+    setState(() async {
+      AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
+      qrData = androidInfo.fingerprint;
+    });
 
-    print("imei: $imei");
+    // IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
+    // print('Running on ${iosInfo.utsname.machine}'); // e.g. "iPod7,1"
   }
 
   @override

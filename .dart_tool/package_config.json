@@ -44,6 +44,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "device_info",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/device_info-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "device_info_platform_interface",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_platform_interface-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "device_info_plus",
       "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus-8.1.0",
       "packageUri": "lib/",
@@ -206,6 +218,42 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "platform_device_id",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform_device_id_linux",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id_linux-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform_device_id_macos",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id_macos-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform_device_id_platform_interface",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id_platform_interface-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform_device_id_web",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id_web-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "platform_device_id_windows",
+      "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/platform_device_id_windows-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "plugin_platform_interface",
       "rootUri": "file:///C:/Users/Harsh%20singh/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
       "packageUri": "lib/",
@@ -344,7 +392,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-03T14:00:21.332854Z",
+  "generated": "2023-04-04T07:38:55.631230Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

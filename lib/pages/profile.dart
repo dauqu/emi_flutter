@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:emi_app/components/details.dart';
-import 'package:emi_app/pages/EditProfile.dart';
+import 'package:emi_app/pages/editprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

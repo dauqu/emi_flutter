@@ -44,7 +44,7 @@ class _EditProfileState extends State<EditProfile> {
                         color: Color(0xFF565656),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                   ]),

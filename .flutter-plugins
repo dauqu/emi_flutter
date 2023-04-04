@@ -1,4 +1,5 @@
 # This is a generated file; do not edit or check into version control.
+device_info=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\device_info-2.0.3\\
 device_info_plus=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\device_info_plus-8.1.0\\
 device_information=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\device_information-0.0.4\\
 imei_plugin=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\imei_plugin-1.2.0\\
@@ -7,6 +8,11 @@ path_provider_android=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted
 path_provider_foundation=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_foundation-2.2.0\\
 path_provider_linux=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_linux-2.1.10\\
 path_provider_windows=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\path_provider_windows-2.1.5\\
+platform_device_id=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\platform_device_id-1.0.1\\
+platform_device_id_linux=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\platform_device_id_linux-1.0.0\\
+platform_device_id_macos=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\platform_device_id_macos-1.0.0\\
+platform_device_id_web=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\platform_device_id_web-1.0.0\\
+platform_device_id_windows=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\platform_device_id_windows-1.0.0\\
 shared_preferences=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\shared_preferences-2.0.20\\
 shared_preferences_android=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\shared_preferences_android-2.0.17\\
 shared_preferences_foundation=C:\\Users\\Harsh singh\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\shared_preferences_foundation-2.1.5\\
