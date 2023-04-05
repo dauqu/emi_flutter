@@ -2,10 +2,9 @@ import 'dart:convert';
 
 import 'package:emi_app/components/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
-import 'package:device_info_plus/device_info_plus.dart';
+import 'package:unique_identifier/unique_identifier.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,17 +14,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // Device Info
-  DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
-
-  var model = "";
-  var imeiNo = "";
-
-// Profile
   late SharedPreferences prefs;
   Map user = {};
   Map emi = {};
   bool haveEmi = false;
+
+  var details = "";
 
   Future getProfile() async {
     try {
@@ -36,6 +30,7 @@ class _HomeState extends State<Home> {
           await http.get(url, headers: {"token": token});
 
       var data = jsonDecode(reponse.body);
+      print(data);
       if (reponse.statusCode == 200) {
         prefs.setString('user', jsonEncode(data));
         setState(() {
@@ -63,6 +58,7 @@ class _HomeState extends State<Home> {
           await http.get(url, headers: {"token": token});
 
       var data = jsonDecode(reponse.body);
+      // print(data);
 
       if (reponse.statusCode == 200) {
         if (!data["have_emis"]) {
@@ -87,17 +83,6 @@ class _HomeState extends State<Home> {
     }
   }
 
-  //=======================================
-  var _deviceId = "";
-  var qrData = "";
-
-  Future<void> initPlatformState() async {
-    setState(() async {
-      AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
-      qrData = androidInfo.id;
-    });
-  }
-
   @override
   void initState() {
     getProfile().then((data) {
@@ -110,7 +95,6 @@ class _HomeState extends State<Home> {
         });
       }
     });
-    initPlatformState();
     super.initState();
   }
 
@@ -140,22 +124,10 @@ class _HomeState extends State<Home> {
                           ),
                           textAlign: TextAlign.left,
                         ),
-                        SizedBox(
-                          height: 100,
-                          width: 100,
-                          child: PrettyQr(
-                            data: qrData,
-                            size: 80,
-                            typeNumber: 5,
-                            roundEdges: true,
-                            errorCorrectLevel: QrErrorCorrectLevel.M,
-                            image: const NetworkImage(
-                                "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/fa8nmvofinznny6rkwvf"),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 50,
-                        ),
+                        Image.network(
+                            "https://qrcg-free-editor.qr-code-generator.com/main/assets/images/websiteQRCode_noFrame.png",
+                            width: 100,
+                            height: 100),
                       ],
                     ),
                   ],
@@ -183,8 +155,8 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           'Remaining EMI',
                           style: TextStyle(
                             fontSize: 15,
@@ -192,8 +164,23 @@ class _HomeState extends State<Home> {
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          "13,000 INR",
-                          style: TextStyle(
+                          //
+                          // +
+
+                          emi["remaining_amount"]
+                                      .toString()
+                                      .split(".")
+                                      .length <=
+                                  1
+                              ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.00"
+                              : emi["remaining_amount"]
+                                          .toString()
+                                          .split(".")[1]
+                                          .length <=
+                                      2
+                                  ? "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1]}"
+                                  : "₹ ${emi["remaining_amount"].toString().split(".")[0]}.${emi["remaining_amount"].toString().split(".")[1].substring(0, 2)}",
+                          style: const TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
@@ -205,18 +192,18 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
-                          "25,000 INR",
-                          style: TextStyle(
+                          '₹ ${emi['total_amount']}',
+                          style: const TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          "14,000 INR",
-                          style: TextStyle(
+                          '₹ ${emi['total_paid']}',
+                          style: const TextStyle(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: Colors.green,
@@ -348,19 +335,18 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'Serial Number',
+                      children: const [
+                        Text(
+                          'IMEI',
                           style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          imeiNo,
-                          style: const TextStyle(
+                          '123456789',
+                          style: TextStyle(
                             fontSize: 15,
-                            //Upper case
                           ),
                           textAlign: TextAlign.left,
                         ),
@@ -371,17 +357,17 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          'Model',
+                      children: const [
+                        Text(
+                          'MAC Address',
                           style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
                         ),
                         Text(
-                          model,
-                          style: const TextStyle(
+                          '123456789',
+                          style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,

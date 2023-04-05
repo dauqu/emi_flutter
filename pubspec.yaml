@@ -37,6 +37,7 @@ dependencies:
   device_info_plus: ^8.1.0
   imei_plugin: ^1.2.0
   platform_device_id: ^1.0.1
+  unique_identifier: ^0.0.3
 
 
 
@@ -45,6 +46,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   pretty_qr_code: ^2.0.3
   device_information: ^0.0.4
+  flutter_device_identifier: ^0.0.1
+  device_imei: ^0.0.4+1
+  flutter_telephony: ^0.0.15
 
 dev_dependencies:
   flutter_test:

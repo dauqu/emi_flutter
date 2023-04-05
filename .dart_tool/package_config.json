@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "device_imei",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/device_imei-0.0.4+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "device_info",
       "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/device_info-2.0.3",
       "packageUri": "lib/",
@@ -98,10 +104,22 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_device_identifier",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/flutter_device_identifier-0.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_telephony",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/flutter_telephony-0.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
     },
     {
       "name": "flutter_test",
@@ -368,6 +386,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "unique_identifier",
+      "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/unique_identifier-0.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/harshaweb/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -392,7 +416,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-05T07:12:59.088746Z",
+  "generated": "2023-04-05T12:16:38.923065Z",
   "generator": "pub",
   "generatorVersion": "2.19.5"
 }
