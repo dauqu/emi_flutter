@@ -2,13 +2,10 @@ import 'dart:convert';
 
 import 'package:emi_app/components/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'package:device_info_plus/device_info_plus.dart';
-import 'package:device_information/device_information.dart';
-import 'package:platform_device_id/platform_device_id.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -186,8 +183,8 @@ class _HomeState extends State<Home> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
+                      children: const [
+                        Text(
                           'Remaining EMI',
                           style: TextStyle(
                             fontSize: 15,
@@ -196,7 +193,7 @@ class _HomeState extends State<Home> {
                         ),
                         Text(
                           "13,000 INR",
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 15,
                           ),
                           textAlign: TextAlign.left,
